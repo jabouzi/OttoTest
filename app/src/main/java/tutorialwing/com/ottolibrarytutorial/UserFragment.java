@@ -51,7 +51,7 @@ public class UserFragment extends Fragment {
 	}
 
 	@Subscribe
-	public void getMessage(Events.ActivityFragmentMessage activityFragmentMessage) {
+	public void getMessagey(Events.ActivityFragmentMessage activityFragmentMessage) {
 		TextView messageView = (TextView) getView().findViewById(R.id.message);
 		messageView.setText(getString(R.string.message_received) + " " + activityFragmentMessage.getMessage());
 

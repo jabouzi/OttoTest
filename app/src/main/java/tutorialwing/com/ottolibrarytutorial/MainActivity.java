@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.otto.Produce;
 import com.squareup.otto.Subscribe;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,13 +38,20 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	@Subscribe
-	public void getMessage(Events.FragmentActivityMessage fragmentActivityMessage) {
+	public void getMessagez(Events.FragmentActivityMessage fragmentActivityMessage) {
 		TextView messageView = (TextView) findViewById(R.id.message);
 		messageView.setText(getString(R.string.message_received) + " " + fragmentActivityMessage.getMessage());
 
 		Toast.makeText(getApplicationContext(),
 				getString(R.string.message_main_activity) + " " + fragmentActivityMessage.getMessage(),
 				Toast.LENGTH_SHORT).show();
+	}
+
+	@Produce
+	public Events.ActivityFragmentMessage produceEvent() {
+		// Assuming that we are tracking the last messages for this
+		// event (i.e. FragmentActivityMessage) and the message is "Hello Tutorialwing"
+		return new Events.ActivityFragmentMessage("Hello Tutorialwing");
 	}
 
 	@Override

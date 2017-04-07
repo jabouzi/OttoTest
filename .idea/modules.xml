@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OttoLibraryTutorial.iml" filepath="$PROJECT_DIR$/OttoLibraryTutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-otto-event-bus-tutorial.iml" filepath="$PROJECT_DIR$/android-otto-event-bus-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
