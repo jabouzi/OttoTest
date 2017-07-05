@@ -16,9 +16,9 @@ public class SecondActivity extends AppCompatActivity {
 	}
 
 	@Produce
-	public Events.FragmentActivityMessage produceEvent() {
+	public Events.Message1 produceEvent() {
 		// Assuming that we are tracking the last messages for this
 		// event (i.e. FragmentActivityMessage) and the message is "Hello Tutorialwing"
- 		return new Events.FragmentActivityMessage("Hello Tutorialwing");
+ 		return new Events.Message1("Hello Tutorialwing");
 	}
 }

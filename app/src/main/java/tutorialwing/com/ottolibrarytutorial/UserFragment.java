@@ -44,19 +44,19 @@ public class UserFragment extends Fragment {
 
 	private void sendMessageToActivity() {
 		EditText etMessage = (EditText) getView().findViewById(R.id.editText);
-		Events.FragmentActivityMessage fragmentActivityMessageEvent =
-				new Events.FragmentActivityMessage(String.valueOf(etMessage.getText()));
+		Events.Message1 fragmentActivityMessageEvent =
+				new Events.Message1(String.valueOf(etMessage.getText()));
 
 		GlobalBus.getBus().post(fragmentActivityMessageEvent);
 	}
 
 	@Subscribe
-	public void getMessagey(Events.ActivityFragmentMessage activityFragmentMessage) {
+	public void getMessagey(Events.Message2 message2) {
 		TextView messageView = (TextView) getView().findViewById(R.id.message);
-		messageView.setText(getString(R.string.message_received) + " " + activityFragmentMessage.getMessage());
+		messageView.setText(getString(R.string.message_received) + " " + message2.getMessage());
 
 		Toast.makeText(getActivity(),
-				getString(R.string.message_fragment) + " " + activityFragmentMessage.getMessage(),
+				getString(R.string.message_fragment) + " " + message2.getMessage(),
 				Toast.LENGTH_SHORT).show();
 	}
 

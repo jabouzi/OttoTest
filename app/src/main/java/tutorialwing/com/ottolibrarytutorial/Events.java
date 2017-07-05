@@ -2,11 +2,11 @@ package tutorialwing.com.ottolibrarytutorial;
 
 public class Events {
 
-	public static class FragmentActivityMessage {
+	public static class Message1 {
 
 		private String message;
 
-		public FragmentActivityMessage(String message) {
+		public Message1(String message) {
 			this.message = message;
 		}
 
@@ -15,11 +15,11 @@ public class Events {
 		}
 	}
 
-	public static class ActivityFragmentMessage {
+	public static class Message2 {
 
 		private String message;
 
-		public ActivityFragmentMessage(String message) {
+		public Message2(String message) {
 			this.message = message;
 		}
 
