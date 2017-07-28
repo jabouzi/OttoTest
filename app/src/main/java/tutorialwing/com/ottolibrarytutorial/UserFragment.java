@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.otto.Produce;
 import com.squareup.otto.Subscribe;
 
 public class UserFragment extends Fragment {
@@ -58,6 +59,13 @@ public class UserFragment extends Fragment {
 		Toast.makeText(getActivity(),
 				getString(R.string.message_fragment) + " " + message2.getMessage(),
 				Toast.LENGTH_SHORT).show();
+	}
+
+	@Produce
+	public Events.Message1 produceEvent() {
+		// Assuming that we are tracking the last messages for this
+		// event (i.e. FragmentActivityMessage) and the message is "Hello Tutorialwing"
+		return new Events.Message1("Hello Tutorialwing # 111");
 	}
 
 	@Override
